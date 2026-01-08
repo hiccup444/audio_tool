@@ -18,6 +18,8 @@ A command-line tool for batch audio processing with EBU R128 loudness analysis, 
 
 ## Installation
 
+- download zip, extract to wherever. Open console inside of audio_tool folder.
+
 ```bash
 cd audio_tool
 pip install -e .
@@ -169,7 +171,7 @@ audio-tool preview song.wav -g 8.0 --clip
 
 ## Common Workflows
 
-### Normalize a batch of files to -14 LUFS (streaming standard)
+### Normalize a batch of files to -14 LUFS
 
 Create a config file `normalize.csv`:
 ```csv
@@ -235,10 +237,6 @@ Install FFmpeg and ensure it's in your PATH:
 - Windows: Download from https://ffmpeg.org/download.html, extract, and add the `bin` folder to your PATH
 - macOS: `brew install ffmpeg`
 - Linux: `sudo apt install ffmpeg` or equivalent
-
-### Gain outside ±12 dB range
-
-The tool limits gain to ±12 dB for safety. If target LUFS requires more gain, it will be clamped and you'll see a warning.
 
 ### Empty or corrupted output files
 
