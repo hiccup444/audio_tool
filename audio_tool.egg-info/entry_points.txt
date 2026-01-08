@@ -1,0 +1,2 @@
+[console_scripts]
+audio-tool = audio_tool.cli:app

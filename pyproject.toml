@@ -1,0 +1,22 @@
+[project]
+name = "audio-tool"
+version = "0.1.0"
+description = "EBU R128 loudness analysis and audio conversion tool"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "soundfile>=0.12.0",
+    "numpy>=1.24.0",
+]
+
+[project.scripts]
+audio-tool = "audio_tool.cli:app"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
